@@ -1,8 +1,6 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-
-from snipsTools import SnipsConfigParser
 from hermes_python.hermes import Hermes
 from hermes_python.ontology import *
 from datetime import datetime
@@ -20,10 +18,6 @@ class VietBot(object):
 
     def __init__(self):
         # get the configuration if needed
-        try:
-            self.config = SnipsConfigParser.read_configuration_file(CONFIG_INI)
-        except:
-            self.config = None
 
         self.start_blocking()
 
